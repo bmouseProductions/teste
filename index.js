@@ -159,21 +159,21 @@ async function enviarEmailBackend(
     // Configurações do servidor SMTP
     let transporter = nodemailer.createTransport(
       smtpTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
+        host: "smtp-mail.outlook.com",
+        port: 587,
+        secure: false,
         auth: {
-          user: "vendascardealempreendimentos@gmail.com",
-          pass: "fcyrwldhmqmvkqqy",
+          user: "contatospets@petsmellon.com.br",
+          pass: "Patense2438",
         },
       })
     );
     // vamo
     // Corpo do e-mail
     let mailOptions = {
-      from: "vendascardealempreendimentos@gmail.com",
+      from: "contatospets@petsmellon.com.br",
       to: ["contato@lojazoomies.com"],
-      subject: "Frutal - Mensagem do formulário da landing page",
+      subject: "Zoomies - Quero ser um representante zoomies",
       html: `<p>Nome: ${nome}</p>
              <p>Telefone: ${telefone}</p>
              <p>E-mail: ${email}</p>
